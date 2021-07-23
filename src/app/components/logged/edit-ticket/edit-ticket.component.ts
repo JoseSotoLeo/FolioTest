@@ -41,7 +41,6 @@ export class EditTicketComponent implements OnInit {
   editCurrentTicket(ticketForm) {
 
     this.infoTicket.message = ticketForm.value.message;
-    console.log(this.infoTicket);
 
 
     this.ticketService.update(this.infoTicket).toPromise().then(() => {

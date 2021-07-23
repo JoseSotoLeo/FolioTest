@@ -44,7 +44,6 @@ export class AnswerTicketComponent implements OnInit {
     this.infoTicket.answered = true;
     this.infoTicket.closingDate = new Date();
 
-    console.log(this.infoTicket);
 
 
 

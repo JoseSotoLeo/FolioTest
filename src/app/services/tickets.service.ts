@@ -24,7 +24,6 @@ export class TicketsService {
 
   create(newTicketInfo): Observable<any> {
     let ticket: Ticket = this.fTicket(newTicketInfo.message);
-    console.log(ticket);
 
     return this.http.post<Ticket>(API_URL + '/tickets', JSON.stringify(ticket), HTTP_OPTIONS).pipe(
       catchError(e => {
