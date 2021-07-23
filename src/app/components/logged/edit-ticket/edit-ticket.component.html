@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-10">
+            <h2>Edit Ticket</h2>
+        </div>
+        <div class="col-2">
+            <button type="button" class="btn btn-danger" (click)="goBack()">Go Back</button>
+        </div>
+    </div>
+    <div class="row">
+        <form class="ticketForm" [formGroup]="ticketForm" (ngSubmit)="editCurrentTicket(ticketForm)"
+            *ngIf="actualTicket$ | async as actualTicket">
+            <div class="form-group container">
+                <div class="input-group mb-3">
+                    <input formControlName="message" type="text" class="form-control" placeholder="Message"
+                        aria-label="Message">
+                </div>
+                <button type="submit" class="btn btn-primary" [disabled]="ticketForm.invalid">Edit</button>
+            </div>
+        </form>
+    </div>
+</div>

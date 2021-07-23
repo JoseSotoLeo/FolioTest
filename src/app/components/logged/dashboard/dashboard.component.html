@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <table class="table" *ngIf="tickets$ | async as tickets">
+                <thead>
+                    <tr>
+                        <th scope="col" *ngFor="let header of headers$ | async">
+                            <div *ngIf="header !== 'id'">{{header}}</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let ticket of tickets">
+                        <td>{{ticket.author}}</td>
+                        <td>{{ticket.date | date: 'y-MM-dd HH:mm:ss' : 'UTC'}}</td>
+                        <td>{{ticket.message}}</td>
+                        <td>{{ticket.answer || 'Not answered yet'}}</td>
+                        <td>{{ticket.answerAuthor || 'Not answered yet'}}</td>
+                        <td>{{ticket.answered}}</td>
+                        <td *ngIf="ticket.closingDate">{{ticket.closingDate | date: 'y-MM-dd HH:mm:ss' : 'UTC'}}</td>
+                        <td *ngIf="!ticket.closingDate">Not answered yet</td>
+                        <td></td>
+                        <td>
+                            <button type="button" class="btn btn-outline-primary"
+                                [disabled]="ticket.answered || actualUser$ !== ticket.author"
+                                (click)="goToEdit(ticket.id)">Edit</button>
+                            <button type="button" class="btn btn-outline-primary" [disabled]="ticket.answered"
+                                (click)="goToAnswer(ticket.id)">Answer</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

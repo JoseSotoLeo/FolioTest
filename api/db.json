@@ -1,0 +1,74 @@
+{
+  "tickets": [
+    {
+      "author": "Jose",
+      "date": "2021-07-23T11:02:29.871Z",
+      "message": "ab",
+      "answer": "bc",
+      "answerAuthor": "Jose",
+      "answered": true,
+      "closingDate": "2021-07-23T11:04:11.805Z",
+      "id": 1
+    },
+    {
+      "author": "Jose",
+      "date": "2021-07-23T11:04:35.622Z",
+      "message": "bbbb",
+      "answer": "asasasa",
+      "answerAuthor": "Jose",
+      "answered": true,
+      "closingDate": "2021-07-23T11:04:50.587Z",
+      "id": 2
+    },
+    {
+      "author": "Jose",
+      "date": "2021-07-23T11:04:42.709Z",
+      "message": "cccc",
+      "answer": "",
+      "answerAuthor": "",
+      "answered": false,
+      "closingDate": null,
+      "id": 3
+    },
+    {
+      "author": "Jose",
+      "date": "2021-07-23T11:05:20.587Z",
+      "message": "jjjjj",
+      "answer": "nnnnnn",
+      "answerAuthor": "otro",
+      "answered": true,
+      "closingDate": "2021-07-23T11:13:35.223Z",
+      "id": 4
+    },
+    {
+      "author": "Jose",
+      "date": "2021-07-23T11:07:05.811Z",
+      "message": "ghghghg",
+      "answer": "mmmm",
+      "answerAuthor": "Jose",
+      "answered": true,
+      "closingDate": "2021-07-23T11:07:11.576Z",
+      "id": 5
+    },
+    {
+      "author": "Jose",
+      "date": "2021-07-23T11:10:21.428Z",
+      "message": "yyyy",
+      "answer": "bbbb",
+      "answerAuthor": "Jose",
+      "answered": true,
+      "closingDate": "2021-07-23T11:10:31.744Z",
+      "id": 6
+    },
+    {
+      "author": "otro",
+      "date": "2021-07-23T11:14:57.083Z",
+      "message": "mio",
+      "answer": "",
+      "answerAuthor": "",
+      "answered": false,
+      "closingDate": null,
+      "id": 7
+    }
+  ]
+}

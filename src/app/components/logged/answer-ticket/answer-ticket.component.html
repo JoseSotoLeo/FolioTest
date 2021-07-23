@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-10">
+            <h2>Add Answer</h2>
+
+        </div>
+        <div class="col-2">
+            <button type="button" class="btn btn-danger" (click)="goBack()">Go Back</button>
+        </div>
+    </div>
+    <div class="row" *ngIf="actualTicket$ | async as actualTicket">
+        <p>Ticket Message: {{actualTicket.message}}</p>
+    </div>
+    <div class="row">
+        <form class="ticketForm" [formGroup]="ticketForm" (ngSubmit)="answerCurrentTicket(ticketForm)">
+            <div class="form-group container">
+                <div class="input-group mb-3">
+                    <input formControlName="answer" type="text" class="form-control" placeholder="Answer"
+                        aria-label="Answer">
+                </div>
+                <button type="submit" class="btn btn-primary" [disabled]="ticketForm.invalid">Answer</button>
+            </div>
+        </form>
+    </div>
+</div>

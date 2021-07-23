@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="col">
+        <div class="card">
+            <div class="card-header">
+                Login
+            </div>
+            <div class="card-body">
+                <form class="loginForm" [formGroup]="loginForm" (ngSubmit)="login(loginForm)">
+                    <div class="form-group container">
+                        <div class="input-group mb-3">
+                            <input formControlName="username" type="text" class="form-control" placeholder="Username"
+                                aria-label="Username">
+                        </div>
+                        <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Login!</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
